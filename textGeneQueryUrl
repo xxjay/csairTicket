@@ -1,0 +1,15 @@
+<?php
+function geneQueryUrl($places,$dates)
+{
+  $baseurl = "http://ec.csair.com/B2C/detail-1-S-0-1-";
+  $baseurlArr = array();
+  foreach ($places as $place){
+    foreach ($date as $dates){
+      $tmp = $baseurl;
+      $tmp .= $place[0] + "-" + $place[1] + $date + ".dat";
+      array_push($baseurlArr,$tmp);
+    }
+  }
+  return $baseurlArr;
+}
+?>
